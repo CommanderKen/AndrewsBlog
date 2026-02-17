@@ -1,0 +1,35 @@
+---
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Image } from "astro:assets";
+
+const { title, date, image, postUrl } = Astro.props;
+const formattedDate = new Date(date).toLocaleDateString("en-GB", {
+  day: "2-digit",
+  month: "short",
+  year: "numeric",
+});
+---
+
+<Card className="relative mx-auto w-full max-w-sm pt-0 gap-3">
+  <Image
+    src={image}
+    alt={title}
+    inferSize={true}
+    class="aspect-video w-full rounded-xl object-cover"
+  />
+  <CardHeader className="pb-3 flex-1">
+    <CardTitle className="text-lg">
+      <a href={postUrl} class="hover:underline">{title}</a>
+    </CardTitle>
+    <Badge variant="secondary" className="w-fit text-xs font-normal">
+      {formattedDate}
+    </Badge>
+  </CardHeader>
+</Card>
