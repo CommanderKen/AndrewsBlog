@@ -1,0 +1,107 @@
+---
+import "@/styles/global.css";
+import MainLayout from "@/layouts/MainLayout.astro";
+
+import ExperienceCard from "@/components/ExperienceCard.astro";
+import EducationCard from "@/components/EducationCard.astro";
+
+const workExperience = [
+  {
+    title: "Software Developer",
+    company: "Dexanet",
+    location: "Sarezzo, BS",
+    period: "2025 - Present",
+    description:
+      "Fullstack web development.",
+  },
+  {
+    title: "Computer Science Tutor",
+    company: "Cooperativa Assolo",
+    location: "Berzo Inferiore, BS",
+    period: "2025",
+    description:
+      "Provided computer science tutoring to high school students.",
+  },
+  {
+    title: "Software Developer",
+    company: "CompuGroup Medical",
+    location: "Costa Volpino, BG",
+    period: "2019 - 2024",
+    description:
+      "Development of pharmacy management software for the CGM (CompuGroup Medical) group.",
+  },
+  {
+    title: "Software Developer",
+    company: "Modis",
+    location: "Bergamo",
+    period: "2018 - 2019",
+    description:
+      "Maintenance and development of banking applications for UBI Banca.",
+  },
+  {
+    title: "Software Developer (Internship)",
+    company: "Lynx SPA",
+    location: "Milan",
+    period: "2017",
+    description:
+      "Maintenance of websites and web applications.",
+  },
+];
+
+const education = [
+  {
+    degree: "Bachelor's Degree in Philosophy",
+    school: "Università degli Studi di Milano",
+    location: "Milan",
+    period: "2021 - 2024",
+    description: "",
+  },
+  {
+    degree: "Advanced Technical Diploma in Software Design and Web Development",
+    school: "Fondazione JobsAcademy",
+    location: "San Paolo d'Argon, BG",
+    period: "2016 - 2018",
+    description: "",
+  },
+  {
+    degree: "High School Diploma in Scientific Studies",
+    school: "IIS Olivelli Putelli",
+    location: "Darfo Boario Terme, BS",
+    period: "2011 - 2016",
+    description: "",
+  },
+];
+---
+
+<MainLayout content={{ title: "Resume" }}>
+  <div class="mx-auto max-w-5xl px-4 py-12">
+    <h1 class="text-balance text-3xl font-bold tracking-tight text-foreground">
+      Resume
+    </h1>
+    <p class="mt-2 text-muted-foreground">
+      A summary of my professional experience and education.
+    </p>
+
+    <section class="mt-12">
+      <h2 class="text-xl font-semibold text-foreground">Work Experience</h2>
+      <div class="mt-6 flex flex-col gap-4">
+        {
+          workExperience.map((job) => (
+            <ExperienceCard key={`${job.company}-${job.period}`} {...job} />
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-xl font-semibold text-foreground">Education</h2>
+      <div class="mt-6 flex flex-col gap-4">
+        {
+          education.map((edu) => (
+            <EducationCard key={`${edu.school}-${edu.period}`} {...edu} />
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</MainLayout>
