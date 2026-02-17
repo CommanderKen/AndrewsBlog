@@ -1,0 +1,48 @@
+---
+import PostLayout from "@/layouts/PostLayout.astro";
+import ImageCard from "@/components/ImageCard.astro";
+
+import image from "@/assets/images/posts/via-degli-dei/via-degli-dei.jpg";
+import florenceCathedralImg from "@/assets/images/posts/via-degli-dei/IMG20210521113114.jpg";
+
+export const metadata = {
+  title: "Via degli Dei",
+  description:
+    "An account of my journey along the Via degli Dei, a historic trail in Italy.",
+  date: "2021-05-30",
+  author: "Andrew Wolf",
+  image: image,
+  tags: ["travel", "hiking", "Italy"],
+};
+---
+
+<PostLayout
+  content={{
+    title: metadata.title,
+    description: metadata.description,
+    date: metadata.date,
+  }}
+>
+  <section class="py-12">
+    <p>
+      The Via degli Dei (Path of the Gods) crosses the Apennines connecting
+      Bologna to Florence. The name derives from the place names of some
+      mountains crossed: Monte Venere (Mount Venus), Monte Adone (Mount Adonis)
+      and Monte Luario. The trail retraces the paths used in the Middle Ages and
+      even earlier by the Romans through what some identify as the Via Flaminia,
+      built in 187 BC. In some points, in fact, you walk right on the ancient
+      road pavements still surviving after 2000 years of history. The trail is
+      about 130 km long and I covered it in 6 stages starting from Bologna:
+      Sasso Marconi, Monzuno, Madonna dei Fornelli, Sant'Agata, Tagliaferro,
+      Florence. These are some photos I took in May 2021. Unfortunately I took
+      them all with my phone.
+    </p>
+  </section>
+  <section>
+    <ImageCard
+      description="The Florence Cathedral"
+      image={florenceCathedralImg}
+      alt="The Florence Cathedral"
+    />
+  </section>
+</PostLayout>
