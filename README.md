@@ -1,13 +1,49 @@
-# Astro with Tailwind
+# Andrew's Blog
 
-```sh
-pnpm create astro@latest -- --template with-tailwindcss
+A simple personal website/playground built with **Astro**, **Tailwind CSS**, and **shadcn UI components**.
+
+## Tech Stack
+
+- Astro
+- TypeScript
+- Tailwind CSS
+- Shadcn UI components
+
+## Getting Started
+
+### 1) Install dependencies
+
+```bash
+pnpm install
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-tailwindcss/devcontainer.json)
+### 2) Start the development server
 
-Astro comes with [Tailwind](https://tailwindcss.com) support out of the box. This example showcases how to style your Astro project with Tailwind.
+```bash
+pnpm run dev --host
+```
 
-For complete setup instructions, please see our [Tailwind Styling Guide](https://docs.astro.build/en/guides/styling/#tailwind).
+Then open the local URL shown in the terminal.
+
+## Available Scripts
+
+- `pnpm run dev` — Start local dev server
+- `pnpm run build` — Build for production
+- `pnpm run preview` — Preview production build
+
+## Project Structure
+
+```text
+src/
+	components/   Reusable Astro and UI components
+	layouts/      Shared page layouts
+	pages/        Route-based pages and blog posts
+	styles/       Global styles
+	assets/       Images and static source assets
+public/         Public static files
+```
+
+## Notes
+
+- Blog posts are under `src/pages/posts/`.
+- Main pages include home, blog, and resume.
