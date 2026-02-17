@@ -1,0 +1,26 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { Badge } from "@/components/ui/badge";
+
+const { content } = Astro.props;
+const formattedDate = new Date(content.date).toLocaleDateString("en-GB", {
+  day: "2-digit",
+  month: "short",
+  year: "numeric",
+});
+---
+
+<MainLayout content={content}>
+  <div class="mx-auto max-w-5xl px-4 py-12">
+    <h1 class="text-balance text-3xl font-bold tracking-tight text-foreground">
+      {content.title}
+    </h1>
+    <p class="mt-2 text-muted-foreground">
+      {content.description}
+    </p>
+    <Badge variant="secondary" className="w-fit text-xs font-normal mt-2">
+      {formattedDate}
+    </Badge>
+    <slot />
+  </div>
+</MainLayout>
