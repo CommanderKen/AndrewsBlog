@@ -1,0 +1,41 @@
+---
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+
+interface ExperienceCardProps {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string;
+}
+
+const { title, company, location, period, description } = Astro.props;
+---
+
+<Card className="gap-1">
+  <CardHeader className="pb-3">
+    <div
+      class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
+    >
+      <CardTitle className="text-lg">{title}</CardTitle>
+      <Badge variant="secondary" className="w-fit text-xs font-normal">
+        {period}
+      </Badge>
+    </div>
+    <CardDescription>
+      {company} &middot; {location}
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p class="text-sm leading-relaxed text-muted-foreground">
+      {description}
+    </p>
+  </CardContent>
+</Card>
