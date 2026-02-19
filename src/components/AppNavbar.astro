@@ -4,13 +4,15 @@ const links = [
   { href: "/blog", label: "Blog" },
   { href: "/resume", label: "Resume" },
 ];
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
 
 <header
-  class="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+  class="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60"
 >
   <nav class="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
-    <a href="/" class="text-lg font-semibold tracking-tight text-foreground">
+    <a href="/" class="text-xl font-semibold text-foreground">
       Andrew Wolf
     </a>
     <ul class="flex items-center gap-6">
@@ -19,7 +21,11 @@ const links = [
           <li>
             <a
               href={link.href}
-              class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              class={`text-md font-medium transition-colors ${
+                currentPath === link.href.slice(1)
+                  ? "text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
             >
               {link.label}
             </a>
