@@ -1,4 +1,6 @@
 ---
+import { ModeToggle } from "@/components/ModeToggle";
+
 const links = [
   { href: "/", label: "Home" },
   { href: "/blog/", label: "Blog" },
@@ -8,13 +10,31 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 ---
 
+<script is:inline>
+	const getThemePreference = () => {
+		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+			return localStorage.getItem('theme');
+		}
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	};
+	const isDark = getThemePreference() === 'dark';
+	document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+ 
+	if (typeof localStorage !== 'undefined') {
+		const observer = new MutationObserver(() => {
+			const isDark = document.documentElement.classList.contains('dark');
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		});
+		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+	}
+</script>
+
+
 <header
   class="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60"
 >
   <nav class="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
-    <a href="/" class="text-xl font-semibold text-foreground">
-      Andrew Wolf
-    </a>
+    <a href="/" class="text-xl font-semibold text-foreground">Andrew Wolf</a>
     <ul class="flex items-center gap-6">
       {
         links.map((link) => (
@@ -32,6 +52,9 @@ const currentPath = pathname.slice(1);
           </li>
         ))
       }
+      <li>
+        <ModeToggle client:load />
+      </li>
     </ul>
   </nav>
 </header>
