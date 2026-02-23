@@ -3,7 +3,7 @@ import "@/styles/global.css";
 import MainLayout from "@/layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import propic from "@/assets/images/andrew_headshot.png";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { Send } from "lucide-react";
 import { GitCommitVertical } from "lucide-react";
@@ -22,16 +22,43 @@ import { BriefcaseBusiness } from "lucide-react";
         class="p-6 max-h-100 w-auto object-cover"
       />
       <div class="flex flex-wrap flex-col">
-        <h1 class="w-full text-balance text-5xl font-bold text-foreground p-3 text-center">Andrew Wolf</h1>
-        <p class="text-xl text-muted-foreground p-3 max-w-100 text-center">
-          Welcome to my little corner on the internet. On this blog I share my thoughts on technology, programming, and anything else that crosses my mind.</p>
+        <h1
+          class="w-full text-balance text-5xl font-bold text-foreground p-3 text-center"
+        >
+          Andrew Wolf
+        </h1>
+        <p class="text-xl text-muted-foreground p-3 max-w-100 text-center">Welcome to my little corner on the internet. On this blog I share my thoughts on technology, programming, and anything else that crosses my mind.</p>
       </div>
     </div>
   </div>
   <div class="flex flex-wrap justify-center gap-y-2 gap-x-6 pt-2 pb-12">
-    <Button variant="outline" className="w-10/12 sm:max-w-32"><Mail /><a href="mailto:me@andrealucchini.com" target="_blank">Email me</a></Button>
-    <Button variant="outline" className="w-10/12 sm:max-w-32"><Send /><a href="https://t.me/andrew_woff" target="_blank">Telegram</a></Button>
-    <Button variant="outline" className="w-10/12 sm:max-w-32"><GitCommitVertical /><a href="https://github.com/CommanderKen" target="_blank">Github</a></Button>
-    <Button variant="outline" className="w-10/12 sm:max-w-32"><BriefcaseBusiness /><a href="https://www.linkedin.com/in/andrea-lucchini/" target="_blank">Linkedin</a></Button>
+    <a
+      href="mailto:me@andrealucchini.com"
+      target="_blank"
+      class={`${buttonVariants({ variant: "outline" })} w-10/12 sm:max-w-32`}
+    >
+      <Mail />Email me
+    </a>
+    <a
+      href="https://t.me/andrew_woff"
+      target="_blank"
+      class={`${buttonVariants({ variant: "outline" })} w-10/12 sm:max-w-32`}
+    >
+      <Send />Telegram
+    </a>
+    <a
+      href="https://github.com/CommanderKen"
+      target="_blank"
+      class={`${buttonVariants({ variant: "outline" })} w-10/12 sm:max-w-32`}
+    >
+      <GitCommitVertical />Github
+    </a>
+    <a
+      href="https://www.linkedin.com/in/andrea-lucchini/"
+      target="_blank"
+      class={`${buttonVariants({ variant: "outline" })} w-10/12 sm:max-w-32`}
+    >
+      <BriefcaseBusiness />Linkedin
+    </a>
   </div>
 </MainLayout>
