@@ -1,5 +1,6 @@
 ---
 import { ModeToggle } from "@/components/ModeToggle";
+import { HamburgerMenu } from "@/components/HamburgerMenu"
 
 const links = [
   { href: "/", label: "Home" },
@@ -29,13 +30,12 @@ const currentPath = pathname.slice(1);
 	}
 </script>
 
-
 <header
-  class="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60"
+  class="sticky top-0 z-50 w-full border-b border-border bg-background/97 sm:backdrop-blur sm:supports-backdrop-filter:bg-background/60 supports-backdrop-filter:bg-background/97"
 >
   <nav class="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
     <a href="/" class="text-xl font-semibold text-foreground">Andrew Wolf</a>
-    <ul class="flex items-center gap-6">
+    <ul class="items-center gap-6 hidden sm:flex">
       {
         links.map((link) => (
           <li>
@@ -56,5 +56,6 @@ const currentPath = pathname.slice(1);
         <ModeToggle client:load />
       </li>
     </ul>
+    <HamburgerMenu links={links} client:load />
   </nav>
 </header>
