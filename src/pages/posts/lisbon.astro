@@ -1,0 +1,133 @@
+---
+import PostLayout from "@/layouts/PostLayout.astro";
+import ImageCard from "@/components/ImageCard.astro";
+
+import image from "@/assets/images/posts/lisbon/lisbon.jpg";
+import tramImg from "@/assets/images/posts/lisbon/IMG_20231102_224034.jpg";
+import vehicleImg from "@/assets/images/posts/lisbon/20221102114000_IMG_3397.jpg";
+import monumentImg from "@/assets/images/posts/lisbon/20221102184148_IMG_3536.jpg";
+import bridgeImg from "@/assets/images/posts/lisbon/20231102204927_IMG_3532.jpg";
+import birdImg from "@/assets/images/posts/lisbon/20231102204621_IMG_3522.jpg";
+import belemTowerImg from "@/assets/images/posts/lisbon/20231102205610_IMG_3556.jpg";
+import hardRockImg from "@/assets/images/posts/lisbon/20231103203035_IMG_3603.jpg";
+import umbrellaImg from "@/assets/images/posts/lisbon/IMG_20231102_214929.jpg";
+import umbrellasImg from "@/assets/images/posts/lisbon/20231102204423_IMG_3480.jpg";
+import statue1Img from "@/assets/images/posts/lisbon/20231102204142_IMG_3456.jpg";
+import statue2Img from "@/assets/images/posts/lisbon/20231102203943_IMG_3461.jpg";
+import selfPortraitImg from "@/assets/images/posts/lisbon/IMG_20231102_215028.jpg";
+import estufaFriaImg from "@/assets/images/posts/lisbon/20231103203536_IMG_3627.jpg";
+import statue3Img from "@/assets/images/posts/lisbon/20221103184759_IMG_3647.jpg";
+import ceilingImg from "@/assets/images/posts/lisbon/20231103203233_IMG_3608.jpg";
+import plantDetailImg from "@/assets/images/posts/lisbon/20231103203443_IMG_3617.jpg";
+import plantImg from "@/assets/images/posts/lisbon/20221103184853_IMG_3651.jpg";
+
+export const metadata = {
+  title: "Lisbon",
+  description: "My journey to Lisbon.",
+  date: "2023-11-30",
+  author: "Andrew Wolf",
+  image: image,
+  tags: ["travel", "Lisbon", "Portugal"],
+};
+---
+
+<PostLayout
+  content={{
+    title: metadata.title,
+    description: metadata.description,
+    date: metadata.date,
+  }}
+>
+  <section class="py-12">
+    <p>
+      In November 2023, I spent four days in Lisbon. Here are some photos I took.
+    </p>
+  </section>
+  <section>
+    <ImageCard
+      description="Tram 28"
+      image={tramImg}
+      alt="Tram 28"
+    />
+    <ImageCard
+      description="An unusual vehicle"
+      image={vehicleImg}
+      alt="Vehicle"
+    />
+    <ImageCard
+      description="Detail of the Monument to the Discoveries"
+      image={monumentImg}
+      alt="Detail of the Monument to the Discoveries"
+    />
+    <ImageCard
+      description="25 de Abril Bridge"
+      image={bridgeImg}
+      alt="25 de Abril Bridge"
+    />
+    <ImageCard
+      description="An unidentified bird"
+      image={birdImg}
+      alt="Bird"
+    />
+    <ImageCard
+      description="Belém Tower"
+      image={belemTowerImg}
+      alt="Belém Tower"
+    />
+    <ImageCard
+      description="Hard Rock Café"
+      image={hardRockImg}
+      alt="Hard Rock Café"
+    />
+    <ImageCard
+      description="An umbrella on Pink Street"
+      image={umbrellaImg}
+      alt="Umbrella"
+    />
+    <ImageCard
+      description="More umbrellas on Pink Street"
+      image={umbrellasImg}
+      alt="Umbrellas"
+    />
+    <ImageCard
+      description="Statue"
+      image={statue1Img}
+      alt="Statue"
+    />
+    <ImageCard
+      description="Crying statue"
+      image={statue2Img}
+      alt="Crying statue"
+    />
+    <ImageCard
+      description="Self-portrait"
+      image={selfPortraitImg}
+      alt="Self-portrait"
+    />
+    <ImageCard
+      description="Estufa Fria (Cold Greenhouse in English) in Eduardo VII Park in Lisbon"
+      image={estufaFriaImg}
+      alt="Estufa Fria"
+    />
+    <ImageCard
+      description="Statue in Estufa Fria"
+      image={statue3Img}
+      alt="Statue"
+    />
+    <ImageCard
+      description="Ceiling of Estufa Fria"
+      image={ceilingImg}
+      alt="Ceiling of Estufa Fria"
+    />
+    <ImageCard
+      description="Plant detail"
+      image={plantDetailImg}
+      alt="Plant detail"
+    />
+    <ImageCard
+      description="Another plant"
+      image={plantImg}
+      alt="Plant"
+    />
+  </section>
+</PostLayout>
