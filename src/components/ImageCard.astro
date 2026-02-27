@@ -2,9 +2,7 @@
 import {
   Card,
   CardHeader,
-  CardTitle,
   CardDescription,
-  CardContent,
 } from "@/components/ui/card";
 import { Image } from "astro:assets";
 
@@ -17,6 +15,7 @@ const { description, image, alt } = Astro.props;
     alt={alt}
     inferSize={true}
     class="w-full rounded-xl object-cover"
+    width={1200}
   />
   <CardHeader className="flex-1 gap-0">
     <CardDescription>
