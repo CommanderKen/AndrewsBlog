@@ -1,0 +1,242 @@
+---
+import PostLayout from "@/layouts/PostLayout.astro";
+import ImageCard from "@/components/ImageCard.astro";
+
+import image from "@/assets/images/posts/sardinia/featured.jpg";
+import agaKhanImg from "@/assets/images/posts/sardinia/IMG_Aga_Khan.jpg";
+import basilicaImg from "@/assets/images/posts/sardinia/20250423_174806.jpg";
+import basilica2Img from "@/assets/images/posts/sardinia/20250423_174400.jpg";
+import sanPaoloImg from "@/assets/images/posts/sardinia/20250423_155552.jpg";
+import marketImg from "@/assets/images/posts/sardinia/20250423_143741.jpg";
+import bridgeImg from "@/assets/images/posts/sardinia/20250423_162620.jpg";
+import wallsImg from "@/assets/images/posts/sardinia/20250423_160619.jpg";
+import boatImg from "@/assets/images/posts/sardinia/20250424_121225.jpg";
+import cabinImg from "@/assets/images/posts/sardinia/20250424_120441.jpg";
+import boatSeaImg from "@/assets/images/posts/sardinia/IMG-20250426-WA0017.jpg";
+import diveImg from "@/assets/images/posts/sardinia/IMG-20250426-WA0007.jpg";
+import boat2Img from "@/assets/images/posts/sardinia/20250426_130649.jpg";
+import sailingImg from "@/assets/images/posts/sardinia/20250428_170943.jpg";
+import sunsetImg from "@/assets/images/posts/sardinia/20250428_200237.jpg";
+import chartsImg from "@/assets/images/posts/sardinia/20250425_115540.jpg";
+import meteorologyImg from "@/assets/images/posts/sardinia/20250428_094725.jpg";
+import logbook1Img from "@/assets/images/posts/sardinia/20250429_141949.jpg";
+import logbook2Img from "@/assets/images/posts/sardinia/20250429_142039.jpg";
+import bonifacio1Img from "@/assets/images/posts/sardinia/20250426_185739.jpg";
+import bonifacio2Img from "@/assets/images/posts/sardinia/20250426_190744.jpg";
+import bonifacio3Img from "@/assets/images/posts/sardinia/20250426_190950.jpg";
+import bonifacio4Img from "@/assets/images/posts/sardinia/20250426_192158.jpg";
+import mangiavolpeImg from "@/assets/images/posts/sardinia/20250427_194703.jpg";
+import maddalenaImg from "@/assets/images/posts/sardinia/20250427_190024.jpg";
+import catImg from "@/assets/images/posts/sardinia/20250427_190144.jpg";
+import manOverboardImg from "@/assets/images/posts/sardinia/man_overboard.png";
+import pointsOfSailImg from "@/assets/images/posts/sardinia/point_of_sail.jpg";
+import goodbyeImg from "@/assets/images/posts/sardinia/IMG-20250426-WA0019.jpg";
+
+export const metadata = {
+  title: "Sardinia by Sailboat",
+  description:
+    "An account of my sailing trip along the coasts of Sardinia and Corsica.",
+  date: "2025-08-26",
+  author: "Andrew Wolf",
+  image: image,
+  tags: ["travel", "sailing", "Italy", "France"],
+};
+---
+
+<PostLayout
+  content={{
+    title: metadata.title,
+    description: metadata.description,
+    date: metadata.date,
+  }}
+>
+  <section class="py-12">
+    <p class="mb-5">
+      Several months have passed since my sailing trip between Sardinia and Corsica and I'd say that, after digesting the experience, the right time has come to share it. Let's start from the beginning. I arrive at Orio airport on the morning of April 23, 2025. The flight is at 12:20 PM and arrival is scheduled for 1:40 PM at Olbia-Costa Smeralda "Karim Aga Khan IV" Airport. But who is this guy?
+    </p>
+    <h4 class="text-balance text-xl font-bold text-foreground mt-6 mb-4">A Bit of History</h4>
+    <p class="mb-5">
+      Karīm al-Husaynī, the real name of His Highness Karim Aga Khan IV, was the forty-ninth Imam of the Nizari Ismaili Muslims. He died on February 4, 2025 at the age of 88. Why was one of the largest airports in Sardinia named after him upon his death? Simple: Prince Karim was the inventor of Costa Smeralda, at least as we know it today. He founded Porto Cervo in 1962, having various infrastructures built, hotels, a 700-berth marina, and in 1969 even the new Olbia-Costa Smeralda Airport, which became the island's most important international hub. Aga Khan, like me, had evidently fallen in love with the beauty of Sardinia's coasts.
+    </p>
+    <ImageCard
+      description="Aga Khan IV in 2014"
+      image={agaKhanImg}
+      alt="Aga Khan IV"
+    />
+    <h4 class="text-balance text-xl font-bold text-foreground mt-6 mb-4">Back to us</h4>
+    <p class="mb-5">
+      My flight arrives one day before the start of the course. This is, in fact, a sailing course, not a simple vacation: specifically the <a class="underline" href="https://www.rya.org.uk/course-finder/competent-crew-practical-course/" target="_blank">Competent Crew Practical Course</a>, organized by <a class="underline" href="https://www.topsailitaly.com/" target="_blank">Top Sail Italy</a>, official training center of the <a class="underline" href="https://en.wikipedia.org/wiki/Royal_Yachting_Association" target="_blank">Royal Yachting Association</a>.<br>I take my suitcase to the B&B and visit Olbia.
+    </p>
+    <ImageCard
+      description="Basilica of San Simplicio"
+      image={basilicaImg}
+      alt="Basilica of San Simplicio"
+    />
+    <ImageCard
+      description="Basilica of San Simplicio"
+      image={basilica2Img}
+      alt="Basilica of San Simplicio"
+    />
+    <ImageCard
+      description="Church of San Paolo Apostolo"
+      image={sanPaoloImg}
+      alt="Church of San Paolo Apostolo"
+    />
+    <ImageCard
+      description="Olbia market square"
+      image={marketImg}
+      alt="Olbia market square"
+    />
+    <ImageCard
+      description="Olbia bridge"
+      image={bridgeImg}
+      alt="Olbia bridge"
+    />
+    <ImageCard
+      description="Punic walls"
+      image={wallsImg}
+      alt="Punic walls"
+    />
+    <p class="mb-5">
+      The next day William picks me up with his van. We arrive at the Marina of Olbia where I meet Leonardo, my instructor for the whole week of the course, and my two companions, a couple of Macedonian doctors who live in Germany.<br>The boat where we'll sleep and eat for the entire duration of the course is a <a class="underline" href="https://www.beneteau.com/it/oceanis-2005-2014/oceanis-381" target="_blank">Beneteau Oceanis 38.1</a> called Top.
+    </p>
+    <ImageCard
+      description="Our boat flying the British flag"
+      image={boatImg}
+      alt="Our boat"
+    />
+    <ImageCard
+      description="My cabin"
+      image={cabinImg}
+      alt="My cabin"
+    />
+    <p class="mb-5">
+      Unfortunately, on the first day we had to stay in port due to bad weather and strong winds. We take advantage of it to go grocery shopping for the galley and do some theory lessons on navigation. For dinner we go to a pizzeria: our last meal on dry land until the end of the course.
+    </p>
+    <ImageCard
+      description="Our boat at sea"
+      image={boatSeaImg}
+      alt="Our boat"
+    />
+    <p class="mb-5">
+      The next day the weather returns in our favor and we depart early in the morning, right after a hearty breakfast.
+    </p>
+    <p class="mb-5">
+      The following days we sail in the La Maddalena archipelago. We reach Caprera, the island of Santo Stefano, the island of Spargi, La Maddalena and Budelli island with its beautiful Spiaggia Rosa. In the morning a hearty breakfast, some theory and we sail until lunchtime. Usually we drop anchor in a bay or cove and eat something light before resuming navigation until dinner time when we reach a port or a cove to spend the night.
+    </p>
+    <ImageCard
+      description="A quick dip"
+      image={diveImg}
+      alt="A quick dip"
+    />
+    <ImageCard
+      description=""
+      image={boat2Img}
+      alt="Boat"
+    />
+    <ImageCard
+      description="Sailing"
+      image={sailingImg}
+      alt="Sailing"
+    />
+    <ImageCard
+      description="Sailing at sunset"
+      image={sunsetImg}
+      alt="Sailing at sunset"
+    />
+    <p class="mb-5">
+      The theory lessons cover navigation, basic engine maintenance, safety, use of onboard equipment and radio, use of navigation charts to plot a course, knots, navigation signals, emergency procedures, basic meteorology...
+    </p>
+    <ImageCard
+      description="Navigation charts"
+      image={chartsImg}
+      alt="Navigation charts"
+    />
+    <ImageCard
+      description="Some meteorology lessons"
+      image={meteorologyImg}
+      alt="Meteorology lessons"
+    />
+    <p class="mb-5">
+      Every now and then we have to fill out the logbook entering our position, our direction, weather conditions and other information. Italian vessels almost never fill it out.
+    </p>
+    <ImageCard
+      description="Some meteorology lessons"
+      image={logbook1Img}
+      alt="Logbook"
+    />
+    <ImageCard
+      description="The logbook"
+      image={logbook2Img}
+      alt="Logbook"
+    />
+    <h4 class="text-balance text-xl font-bold text-foreground mt-6 mb-4">Bonifacio</h4>
+    <p class="mb-5">
+      We decide to go all the way to Bonifacio, in Corsica. We spend the whole day sailing, except for a short lunch break. An exhausting day, but it was worth it. As soon as we enter French waters, we replace the Sardinian courtesy flag with the Corsican one. The courtesy flag is the national flag of the country being visited and is hoisted on the starboard spreader as a sign of respect towards the host nation. In our case we had the Sardinian flag. Before entering the Marina of Bonifacio we sail along a huge white rock wall on whose top stands the old town, now abandoned. The port of Bonifacio is stunning and despite the low season period, there are numerous boats present. After dinner, as usual consumed on the boat, my two travel companions go to visit the town while I stay with Leonardo to wait for the arrival of William’s boat which will only arrive after 10 PM: you can tell it’s a boat of only Italians. After helping them moor the boat we go to sleep. The next morning I take the opportunity to take a shower in the harbor master’s bathrooms, have breakfast with a croissant and quickly visit the town. Then we head back towards Porto Cala Mangiavolpe, La Maddalena.
+    </p>
+    <ImageCard
+      description="The logbook"
+      image={bonifacio1Img}
+      alt="The coast of Bonifacio"
+    />
+    <ImageCard
+      description="The logbook"
+      image={bonifacio2Img}
+      alt="The coast of Bonifacio"
+    />
+    <ImageCard
+      description="The logbook"
+      image={bonifacio3Img}
+      alt="The coast of Bonifacio"
+    />
+    <ImageCard
+      description="Bonifacio"
+      image={bonifacio4Img}
+      alt="Bonifacio"
+    />
+    <h4 class="text-balance text-xl font-bold text-foreground mt-6 mb-4">La Maddalena</h4>
+    <p class="mb-5">
+      Once we arrive at La Maddalena we take the opportunity to visit the town, buy some souvenirs and replenish supplies.
+    </p>
+    <ImageCard
+      description="Marina of Cala Mangiavolpe, La Maddalena"
+      image={mangiavolpeImg}
+      alt="Marina of Cala Mangiavolpe, La Maddalena"
+    />
+    <ImageCard
+      description="An alley in La Maddalena"
+      image={maddalenaImg}
+      alt="An alley in La Maddalena"
+    />
+    <ImageCard
+      description="A cat watches us"
+      image={catImg}
+      alt="A cat"
+    />
+    <p class="mb-5">
+      On the last day we practice the "man overboard" maneuver. In the unfortunate event that a person falls off the boat, it’s necessary to perform a maneuver to recover them. First you shout “man overboard” to alert the crew. One person must take the responsibility of maintaining constant visual contact with the person in the water. You mark the boat’s position via the onboard GPS and make a “mayday call” via radio to alert rescue services and any nearby boats. Immediately the recovery maneuver also begins: you bring the boat to beam reach, move away the length of about 4 boats, tack and return towards the man overboard while slowing down and recover them with a rope. The following diagram explains it better. We practiced with a buoy.
+    </p>
+    <ImageCard
+      description="Man Overboard"
+      image={manOverboardImg}
+      alt="Man Overboard"
+    />
+    <ImageCard
+      description="Sailing"
+      image={pointsOfSailImg}
+      alt="Points of Sail"
+    />
+    <h4 class="text-balance text-xl font-bold text-foreground mt-6 mb-4">Final Thoughts</h4>
+    <p class="mb-5">
+      The course ended on April 28, but I had my return flight from Olbia at 5:40 PM the next day. William and Leonardo were kind enough to let me sleep on the boat one more day and take me to the airport. So I spend the night of the 28th in the port of Cannigione, near Olbia. When I’m about to load my suitcase onto William’s van, the zipper breaks and the suitcase no longer stays closed. Fortunately William promptly repaired it by tying it with a piece of boat rope found on the van!
+    </p>
+    <p class="mb-5">
+      The return flight was as smooth as the outbound one, just a bit more melancholic. I’ll miss the wind, the sea, and the ports, the seasickness, the dinners together below deck and Leonardo’s stories, the stars, the sunsets and the horizon. I’ll miss that particular sense of freedom that only a boat in the middle of the sea can make you feel. But in the end it’s also nice to return home, perhaps a little different from when you left.
+    </p>
+    <ImageCard
+      description="Goodbye"
+      image={goodbyeImg}
+      alt="Goodbye"
+    />
+  </section>
+</PostLayout>
